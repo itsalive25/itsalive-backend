@@ -1,0 +1,34 @@
+<div class="gutter">
+  <div class="left-gutter"></div>
+  <div class="right-gutter"></div>
+</div>
+
+ <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+
+<script>
+  async function loadPadMarkdown() {
+    const url = "https://pad.piratenpartei.at/p/ITSA-assignment-01/export/txt";
+    const res = await fetch(url);
+    const markdown = await res.text(); // <-- roher Markdown aus dem Pad!
+
+    const html = marked.parse(markdown);
+    document.getElementById("pad-content").innerHTML = html;
+
+    // Optional zum Debuggen
+    // console.log(markdown);
+  }
+
+  loadPadMarkdown();
+</script>
+
+
+
+
+
+
+  
+</body>
+
+</html>
+
+
