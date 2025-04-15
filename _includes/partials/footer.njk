@@ -5,48 +5,30 @@
 
  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
-
 <script>
-  document.addEventListener("DOMContentLoaded", async () => {
-    const url = "https://pad.piratenpartei.at/p/ITSA-assignment-00/export/txt";
-    const res = await fetch(url);
-    const markdown = await res.text();
-    const html = marked.parse(markdown);
+  async function loadPad(targetId, padUrl) {
+    try {
+      const res = await fetch(padUrl);
+      const markdown = await res.text();
+      const html = marked.parse(markdown);
 
-    const target = document.getElementById("submissions-0");
-    if (target) target.innerHTML = html;
+      const target = document.getElementById(targetId);
+      if (target) {
+        target.innerHTML = html;
+      } else {
+        console.warn(`Element with id "${targetId}" not found.`);
+      }
+    } catch (err) {
+      console.error(`Fehler beim Laden von ${padUrl} →`, err);
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    loadPad("submissions-01", "https://pad.piratenpartei.at/p/ITSA-assignment-01/export/txt");
+    loadPad("submissions-00", "https://pad.piratenpartei.at/p/ITSA-assignment-00/export/txt");
+    loadPad("material", "https://pad.piratenpartei.at/p/ITSA-material/export/txt");
   });
 </script>
-
-<script>
-  async function loadSubmission01() {
-    const url = "https://pad.piratenpartei.at/p/ITSA-assignment-01/export/txt";
-    const res = await fetch(url);
-    const markdown = await res.text(); // <-- roher Markdown aus dem Pad!
-
-    const html = marked.parse(markdown);
-    document.getElementById("submissions-01").innerHTML = html;
-  }
-
-  loadSubmission01();
-</script>
-
-
-
-<script>
-  async function loadMaterial() {
-    const url = "https://pad.piratenpartei.at/p/ITSA-material/export/txt";
-    const res = await fetch(url);
-    const markdown = await res.text(); // <-- roher Markdown aus dem Pad!
-
-    const html = marked.parse(markdown);
-    document.getElementById("material").innerHTML = html;
-  }
-
-  loadMaterial();
-</script>
-
-
 
 
 
