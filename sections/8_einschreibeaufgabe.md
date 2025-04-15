@@ -1,5 +1,5 @@
 ---
-title: "einschreibeaufgabe"
+title: "Einschreibeaufgabe"
 order: 8
 ---
 
@@ -20,3 +20,5 @@ order: 8
 
 * Sign Up & Upload here:  
 [https://tinyurl.com/typo-unchained](https://tinyurl.com/typo-unchained)
+
+<div id="submissions-00" class="pad-content">⏳ Loading Content from Etherpad...</div>

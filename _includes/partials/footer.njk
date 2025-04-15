@@ -5,8 +5,21 @@
 
  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
 
+
 <script>
-  async function loadPadMarkdown() {
+  document.addEventListener("DOMContentLoaded", async () => {
+    const url = "https://pad.piratenpartei.at/p/ITSA-assignment-00/export/txt";
+    const res = await fetch(url);
+    const markdown = await res.text();
+    const html = marked.parse(markdown);
+
+    const target = document.getElementById("submissions-0");
+    if (target) target.innerHTML = html;
+  });
+</script>
+
+<script>
+  async function loadSubmission01() {
     const url = "https://pad.piratenpartei.at/p/ITSA-assignment-01/export/txt";
     const res = await fetch(url);
     const markdown = await res.text(); // <-- roher Markdown aus dem Pad!
@@ -15,7 +28,22 @@
     document.getElementById("submissions-01").innerHTML = html;
   }
 
-  loadPadMarkdown();
+  loadSubmission01();
+</script>
+
+
+
+<script>
+  async function loadMaterial() {
+    const url = "https://pad.piratenpartei.at/p/ITSA-material/export/txt";
+    const res = await fetch(url);
+    const markdown = await res.text(); // <-- roher Markdown aus dem Pad!
+
+    const html = marked.parse(markdown);
+    document.getElementById("material").innerHTML = html;
+  }
+
+  loadMaterial();
 </script>
 
 

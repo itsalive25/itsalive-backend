@@ -1,7 +1,7 @@
 ---
 order: 5
 title: "assignment-01"
-eleventyExcludeFromCollections: false
+eleventyExcludeFromCollections: true
 ---
 
 ![Cropped and edited lobby card for Frankenstein, featuring Colin Clive, DwightFrye and Boris Karloff. Image is assumed to be in the public domain as no copyright is in evidence.](https://upload.wikimedia.org/wikipedia/commons/7/7e/Frankenstein1931CliveKarloffCrop.jpg)

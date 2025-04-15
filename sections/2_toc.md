@@ -12,12 +12,20 @@ order: 2
 
 <!-- 1. [Title](#title) -->
 <!-- 2. [Index](#index) -->
-3. [Intro](#intro)
+<!-- 3. [Intro](#intro)
 4. [Kursvorstellung](#kursvorstellung)
 5. [Assignment-01](#assignment-01)
 6. [Material](#material)
 7. [Links](#links)
-8. [Einschreibeaufgabe](#einschreibeaufgabe)
+8. [Einschreibeaufgabe](#einschreibeaufgabe) -->
+
+
+{% set sortedSections = collections.section | sort(attribute="data.order") %}
+
+{% for item in sortedSections %}
+{{ item.data.order }}. [{{ item.data.title }}](#{{ item.data.title | slug }})
+{% endfor %}
+
 
 
 

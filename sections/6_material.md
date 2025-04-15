@@ -1,31 +1,13 @@
 ---
-title: "material"
+title: "Material"
 order: 6
 ---
 
-![Engraving published in the series Les costumes grotesques et les métiers (The Fancy Trade Costumes). Nicolas II de Larmessin created 97 engravings showing the different trades of the time (with costumes made of the tools of the trade), published around 1695 and in the 18th century, in variously-titled works (Les costumes grotesques et les métiers, Costumes grotesques, Habits des métiers et professions). With this series, he created a genre comparable to the Danse Macabre (Dance of Death), where different professions were shown in a dance with death.](https://upload.wikimedia.org/wikipedia/commons/e/eb/Habit_d%E2%80%99imprimeur_en_lettres_%28The_Printer%E2%80%99s_Costume%29.jpg)
+![The Library of Babel is a place for scholars to do research, for artists and writers to seek inspiration, for anyone with curiosity or a sense of humor to reflect on the weirdness of existence - in short, it’s just like any other library. If completed, it would contain every possible combination of 1,312,000 characters, including lower case letters, space, comma, and period. Thus, it would contain every book that ever has been written, and every book that ever could be - including every play, every song, every scientific paper, every legal decision, every constitution, every piece of scripture, and so on. At present it contains all possible pages of 3200 characters, about 104677 books. Since I imagine the question will present itself in some visitors’ minds (a certain amount of distrust of the virtual is inevitable) I’ll head off any doubts: any text you find in any location of the library will be in the same place in perpetuity. We do not simply generate and store books as they are requested - in fact, the storage demands would make that impossible. Every possible permutation of letters is accessible at this very moment in one of the library's books, only awaiting its discovery. We encourage those who find strange concatenations among the variations of letters to write about their discoveries in the forum, so future generations may benefit from their research.](https://libraryofbabel.info/img/bookshelf3.gif)
 
 ## [Material](#material)
 
-### Texte
-
-[»Der Briefwechsel zwischen Friedrich Engels und Karl Marx 1844 bis 1883, Erster Band«, herausgegeben von A. Bebel und Ed. Bernstein](https://www.gutenberg.org/ebooks/64327)  
-
-[Henry Van der Velde: Amo](https://www.gutenberg.org/ebooks/27859)  
-
-[Vignelli Canon gegen Emigré](https://www.rit.edu/vignellicenter/sites/rit.edu.vignellicenter/files/documents/The%20Vignelli%20Canon.pdf)  
-
-[Emigre “It’s Their Bodoni” by Vignelli](https://museobodoniano.com/bodoniinuse/emigre-its-their-bodoni/)  
-
-[Ludwig Wittgenstein: Traktatus logico-philosophicus](https://www.gutenberg.org/ebooks/5740)
-
-[Céline Dion – I am Alive](https://genius.com/Celine-dion-im-alive-lyrics)
-
-### Bilder
-
-[Wikimedia Commons](https://commons.wikimedia.org/wiki/Main_Page)
-
-
+<div id="material" class="pad-content">⏳ Loading Content from Etherpad...</div>
 
 
 
