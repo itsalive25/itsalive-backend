@@ -1,13 +1,12 @@
 ---
 order: 5
-title: "aufgaben"
+title: "assignment-01"
+eleventyExcludeFromCollections: false
 ---
 
 ![Cropped and edited lobby card for Frankenstein, featuring Colin Clive, DwightFrye and Boris Karloff. Image is assumed to be in the public domain as no copyright is in evidence.](https://upload.wikimedia.org/wikipedia/commons/7/7e/Frankenstein1931CliveKarloffCrop.jpg)
 
-![Cropped and edited lobby card for Frankenstein, featuring Colin Clive, DwightFrye and Boris Karloff. Image is assumed to be in the public domain as no copyright is in evidence.](https://upload.wikimedia.org/wikipedia/commons/7/7e/Frankenstein1931CliveKarloffCrop.jpg)
-
-## [Aufgaben](#aufgaben)
+## [Assignment-01](#assignment-01)
 
 * In der ersten Aufgabe starten wir mit einem Plakat im Format A2. 
 1. Lade dafür diese →[Vorlage](https://the-possible-platform.github.io/assets/vorlagen/241024_caap_text_a2%20Folder.zip) herunter und öffne Sie in Indesign. Der gesamte Text liegt hier in einem Rahmen, welcher nicht verändert werden darf. 
@@ -17,6 +16,6 @@ Ziel der Übung ist, den Text ausschließlich über das Zuweisen von Absatzforma
 
 3. Lade deine Ergebnisse als pdf [hier](https://drive.google.com/open?id=11zGp1AxggcMfUyyypoFPNFBfRmWKI48X&usp=drive_fs) hoch.
 
-  <div id="pad-content">⏳ Lade Inhalt...</div>
+  <div id="submissions-01" class="pad-content">⏳ Loading Content from Etherpad...</div>
 
 

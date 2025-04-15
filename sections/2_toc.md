@@ -14,7 +14,7 @@ order: 2
 <!-- 2. [Index](#index) -->
 3. [Intro](#intro)
 4. [Kursvorstellung](#kursvorstellung)
-5. [Aufgaben](#aufgaben)
+5. [Assignment-01](#assignment-01)
 6. [Material](#material)
 7. [Links](#links)
 8. [Einschreibeaufgabe](#einschreibeaufgabe)

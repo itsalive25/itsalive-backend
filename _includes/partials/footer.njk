@@ -12,10 +12,7 @@
     const markdown = await res.text(); // <-- roher Markdown aus dem Pad!
 
     const html = marked.parse(markdown);
-    document.getElementById("pad-content").innerHTML = html;
-
-    // Optional zum Debuggen
-    // console.log(markdown);
+    document.getElementById("submissions-01").innerHTML = html;
   }
 
   loadPadMarkdown();
