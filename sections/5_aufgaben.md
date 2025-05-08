@@ -1,21 +1,11 @@
 ---
-order: 5
-title: "assignment-01"
-eleventyExcludeFromCollections: true
+order: 8
+title: "Aufgaben"
+eleventyExcludeFromCollections: false
 ---
 
-![Cropped and edited lobby card for Frankenstein, featuring Colin Clive, DwightFrye and Boris Karloff. Image is assumed to be in the public domain as no copyright is in evidence.](https://upload.wikimedia.org/wikipedia/commons/7/7e/Frankenstein1931CliveKarloffCrop.jpg)
+![Engraving published in the series Les costumes grotesques et les métiers (The Fancy Trade Costumes). Nicolas II de Larmessin created 97 engravings showing the different trades of the time (with costumes made of the tools of the trade), published around 1695 and in the 18th century, in variously-titled works (Les costumes grotesques et les métiers, Costumes grotesques, Habits des métiers et professions). With this series, he created a genre comparable to the Danse Macabre (Dance of Death), where different professions were shown in a dance with death.](https://upload.wikimedia.org/wikipedia/commons/e/eb/Habit_d%E2%80%99imprimeur_en_lettres_%28The_Printer%E2%80%99s_Costume%29.jpg)
 
-## [Assignment-01](#assignment-01)
+## [Aufgaben](#aufgaben)
 
-* In der ersten Aufgabe starten wir mit einem Plakat im Format A2. 
-1. Lade dafür diese →[Vorlage](https://the-possible-platform.github.io/assets/vorlagen/241024_caap_text_a2%20Folder.zip) herunter und öffne Sie in Indesign. Der gesamte Text liegt hier in einem Rahmen, welcher nicht verändert werden darf. 
-2. Öffne das Fenster _Absatzformate_, ziehe es groß und öffne alle Gruppen, sodass du alle Formate sehen kannst. Die Formate sind zunächst in die Schriftgrößen S M L und XL gruppiert und jeweils in 1-, 2- oder 4-spaltig eingeteilt. Möglich ist außerdem das Strukturieren des Textes durch Spaltenumbrüche _Schrift → Umbruchzeichen einfügen → Spaltenumbruch_.
-
-Ziel der Übung ist, den Text ausschließlich über das Zuweisen von Absatzformaten zu gestalten — Viel Spaß!
-
-3. Lade deine Ergebnisse als pdf [hier](https://drive.google.com/open?id=11zGp1AxggcMfUyyypoFPNFBfRmWKI48X&usp=drive_fs) hoch.
-
-  <div id="submissions-01" class="pad-content">⏳ Loading Content from Etherpad...</div>
-
-
+<div id="assignment-01" class="aufgaben pad-content">⏳ Loading Content from Etherpad...</div>

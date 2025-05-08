@@ -3,33 +3,71 @@
   <div class="right-gutter"></div>
 </div>
 
- <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+ <script src="assets/js/marked.esm.js"></script>
+
+ 
 
 <script>
-  async function loadPad(targetId, padUrl) {
-    try {
-      const res = await fetch(padUrl);
-      const markdown = await res.text();
-      const html = marked.parse(markdown);
+  // Retry-fähige Ladefunktion
+  async function loadPad(targetId, padUrl, maxRetries = 10, delayMs = 200) {
+    for (let attempt = 1; attempt <= maxRetries; attempt++) {
+      try {
+        console.log(`🔄 ${targetId} – Versuch ${attempt}...`);
 
-      const target = document.getElementById(targetId);
-      if (target) {
-        target.innerHTML = html;
-      } else {
-        console.warn(`Element with id "${targetId}" not found.`);
+        const res = await fetch(padUrl);
+        if (!res.ok) throw new Error(`HTTP ${res.status}`);
+
+        const markdown = await res.text();
+        const html = marked.parse(markdown);
+
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.innerHTML = html;
+          console.log(`✅ ${targetId} geladen.`);
+        } else {
+          console.warn(`⚠️ Element mit id "${targetId}" nicht gefunden.`);
+        }
+
+        return; // erfolgreich → abbrechen
+
+      } catch (err) {
+        console.error(`❌ Fehler beim Laden von ${padUrl} (Versuch ${attempt}) →`, err);
+        if (attempt < maxRetries) {
+          await delay(delayMs); // warten vor erneutem Versuch
+        } else {
+          console.error(`⛔ ${targetId} konnte nach ${maxRetries} Versuchen nicht geladen werden.`);
+        }
       }
-    } catch (err) {
-      console.error(`Fehler beim Laden von ${padUrl} →`, err);
     }
   }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    loadPad("submissions-01", "https://pad.piratenpartei.at/p/ITSA-assignment-01/export/txt");
-    loadPad("submissions-00", "https://pad.piratenpartei.at/p/ITSA-assignment-00/export/txt");
-    loadPad("material", "https://pad.piratenpartei.at/p/ITSA-material/export/txt");
+  // Hilfsfunktion zum Warten
+  function delay(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  document.addEventListener("DOMContentLoaded", async () => {
+    await loadPad("material-pad", "https://pad.piratenpartei.at/p/ITSA-material/export/txt");
+    await delay(100);
+
+    await loadPad("assignment-01", "https://pad.piratenpartei.at/p/ITSA-assignments/export/txt");
+    await delay(100);
+
+    // await loadPad("submissions-01", "https://pad.piratenpartei.at/p/ITSA-assignment-01/export/txt");
+    // await delay(100);
+
+    // await loadPad("submissions-00", "https://pad.piratenpartei.at/p/ITSA-assignment-00/export/txt");
+    // await delay(100);
+
+    await loadPad("minutes-pad", "https://pad.piratenpartei.at/p/ITSA-minutes/export/txt");
+    await delay(100);
+
+    
   });
 </script>
 
+
+<script src="assets/js/main.js"></script>
 
 
 

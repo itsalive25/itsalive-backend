@@ -1,5 +1,6 @@
 {
 	"tags":"section",
-	"permalink":false
+	"permalink":false,
+	"layout":"layouts/right-page.njk"
 }
 

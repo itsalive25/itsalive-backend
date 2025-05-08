@@ -68,9 +68,30 @@ section{
   box-shadow: 0px 0 27px 0 black;
 }
 
-h1,h2,h3,h4,h5,h6,p,li, hr{
+h1,h2,h3,h4,h5,h6,p,ul,hr,ol{
 	margin-left: 50vw;
 	padding: 0 2rem 0rem 2rem;
+}
+
+h5{
+	padding-top: .5rem;
+
+}
+
+ul ul{
+	margin-left: 0;
+}
+
+li{
+	list-style: inside;
+	padding-left: 3rem;
+  text-indent: -.95rem;
+}
+
+.smalltype{
+	font-size: 1rem;
+	text-indent: 0;
+	font-weight: normal;
 }
 
 p{
@@ -81,13 +102,27 @@ p{
 }
 
 
-p,li{
+p{
 	padding-left: 2rem;
 /*	list-style: none;*/
 }
 
+#material > p,
+#links > p,
+.aufgaben > p {
+	padding-left: 6rem;
+	text-indent: -2rem;
+}
+
+hr{
+	color: black;
+	border-width: .5px;
+	border-style: solid;
+	margin: 10px 2vw 10px 52vw;
+}
+
 ul {
-  list-style-type: none;
+/*  list-style-type: none;*/
   padding-left: 0; 
 }
 
@@ -109,10 +144,14 @@ img{
 	max-width: 43vw;
 	max-height: 100vh;
 /*	margin: 2rem 0 4rem 0;*/
+}
+
+img, p > img{
 	mix-blend-mode: multiply;
 }
 
-.pad-content{
+
+.submissions {
 /*	display: grid;*/
 padding-top: 2rem;
 column-count: 2;
@@ -120,29 +159,50 @@ column-count: 2;
 	mix-blend-mode: multiply;
 }
 
-.pad-content > p > img,
-.pad-content > :is(p, h2, h3, h4, h5, h6) {
+
+.protokolle .contains-images{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin: 0;
+}
+
+.submissions > p > img,
+.protokolle img,
+.submissions > :is(p, h2, h3, h4, h5, h6){
 	position: relative;
-	display: block;
+/*	display: block;*/
 	padding: 0;
 	margin: 0;
 	text-indent: 2rem;
 }
 
-.pad-content > :is(h2,h3,h4) {
+/*.protokolle > p > img{
+	margin-left: -50vw;
+	column-count: 2;
+}*/
+
+/*.protokolle > p > img + img{
+	margin-left: 0;
+}*/
+
+.submissions > :is(h2,h3,h4) {
 	column-span: all;
 /*	padding-top: 1rem;*/
 }
 
-.pad-content > h5,p {
+.submissions > h5,p {
 	break-inside: avoid-column;
 }
 
 
-.pad-content > p > img{
+.submissions > p > img,
+.protokolle img{
 	padding: 5px 0;
 	break-after: column;
+
 }
+
+
 
 
 
@@ -204,8 +264,9 @@ h4{
 }
 
 a.arrow{
-	position: absolute;
+	position: fixed;
 	margin: -.35rem 0 0 0;
+	top: 0;
 	left: 0;
 	z-index: 9999;
 	text-decoration: none;
@@ -213,6 +274,7 @@ a.arrow{
 	padding: 10px;
 	display: inline-block;
 	pointer-events: auto;
+	text-indent: 2rem;
 /*	outline: 2px solid;*/
 /*	background-color: none;*/
 }
@@ -227,9 +289,9 @@ a.arrow{
 
 
 ol {
-/*  list-style: none;  */
+  list-style: none;  
   padding-left: 0;
-  margin-left: 0;
+/*  margin-left: 0;*/
 }
 
 #intro{
@@ -270,7 +332,7 @@ blockquote, blockquote > p{
 	font-size: 18px;
 }
 
-	.pad-content{
+	.submissions{
 		column-count: 1;
 	}
 
@@ -311,7 +373,8 @@ blockquote, blockquote > p{
 a.arrow{
 	font-size: .9rem;
 	padding: 10px;
-	margin: -18px -10px -55px -10px;
+
+/*	margin: -18px -10px -55px -10px;*/
 }
 
 	#title > p > img, .gutter {
@@ -339,6 +402,63 @@ section{
   }
 }
 
+
+@media only screen and (min-width: 1450px) and (orientation: landscape) {
+
+*{
+	font-size: 24px;
+}
+
+#title {
+	font-size: 2.5vw !important;
+	padding-top: 10vh ;
+}
+
+#title img {
+	margin-top: -10vh;
+}
+
+#title :is(h1,em) {
+	font-size: 4rem !important;
+}
+
+
+#index > ol > :is(li,p,a),
+#index > ol > :is(li,p,a) > :is(li,p,a) > a{
+	font-size: 2rem;
+	text-decoration: none;
+	text-indent: 0;
+	padding-left: 2rem;
+}
+
+#intro > :is(p,a,strong),
+#einschreibeaufgabe :is(p,a,strong) {
+	column-count: 2;
+}
+
+#intro br,
+#einschreibeaufgabe br{
+	column-span: all;
+}
+
+blockquote{
+	padding-right: 10%;
+}
+img{
+	width: 42vw;
+	max-height: unset;
+}
+
+a.arrow, .pagina{
+	font-size: 1.5rem;
+/*	margin-top: -50px;*/
+}
+
+
+}
+
+
+
 @media only screen and (max-width: 900px) and (orientation: landscape) {
 
 *	{
@@ -352,7 +472,7 @@ section{
 	h2{
 		font-size: 1.5rem;
 	}
-	h1, h2, h3, h4, h5, h6, p, li, hr{
+	h1, h2, h3, h4, h5, h6, p, hr{
 		margin-left: 48vw;
 		padding: 0 0rem 0 1rem !important;
 	}
@@ -379,13 +499,13 @@ section{
 		margin: -1rem 0rem;
 	}
 
-.pad-content, .pad-content > :is(h2,h3,h4,p,img){
+.submissions, .submissions > :is(h2,h3,h4,p,img){
 		padding: 0 !important;
 		margin: 0;
 		text-indent: 0;
 		column-gap: 10vw;
 	}
-	.pad-content > p > img {
+	.submissions > p > img {
 		position: static;
 	}
 

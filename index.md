@@ -18,7 +18,7 @@ title: "One-Pager"
    <a href="#index" class="arrow">▲</a>
 {% endif %}
 
-<section id="{{ item.data.title | slug }}">
+<section id="{{ item.data.title | slug }}" class="{{ item.data.title | slug }}">
 	
   {{ item.templateContent | safe }}
 </section>

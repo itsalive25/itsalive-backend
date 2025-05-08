@@ -1,6 +1,7 @@
 ---
 order: 4
 title: Kursvorstellung
+eleventyExcludeFromCollections: true
 ---
 
 
