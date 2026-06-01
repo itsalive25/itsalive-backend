@@ -1,0 +1,95 @@
+body {
+  font-family: Arial Rounded MT Bold;
+  background: white;
+  color: black;
+  display: block;
+  text-align: left;
+  font-size: 12px;
+  height: 100vh;
+  overflow: auto;
+}
+
+.container{
+    display: grid;
+    padding-top: 10px;
+    grid-template-rows: repeat(4, autofit); 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 0em 3em;
+}
+
+
+
+
+h1,h2{
+  margin: 0px;
+  font-weight: normal;
+  text-align: left;
+}
+
+
+ p, .small{
+  font-size: 1em;
+  line-height: 1.15em;
+}
+
+h2,.medium{
+  font-size: 1.5em;
+  line-height: 0.95em;
+  letter-spacing:-0.065em;
+}
+
+.large{
+  font-size: 5em;
+  line-height: 0.8em;
+  letter-spacing: -0.25rem;
+}
+
+h1,.extralarge{
+  font-size: 13vw;
+  line-height: 0.8em;
+  letter-spacing: -0.1em;
+}
+
+
+h2,h1,.one_col{
+  column-count 1;
+}
+
+.two_col{
+  display: block;
+  column-count: 2;
+  column-gap: 0.3em;
+  margin: 0px;
+
+}
+
+.four_col{
+/*  column-count: 4;
+  column-gap: 0.7em; */
+}
+/* 
+@media (min-width: 1840px){
+  p{
+    font-size: 0.85em;
+  }
+}
+
+@media (max-width: 740px) {
+  p{
+    font-size: 10px;
+  }
+  h2{
+    font-size: 10px;
+  }
+  .h2p{
+    display: flex;
+    flex-direction: row;
+    gap: 2px;
+  }
+  content{
+    display: block;
+  }
+  .haupttext{
+    column-count: 1;
+  }
+} */

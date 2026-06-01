@@ -1,0 +1,198 @@
+@media print{
+  @page {
+    size: 105mm 170mm;
+    margin: 28.575mm 29mm;
+    top-center: 200mm;
+    bleed: 3mm;
+    marks: crop cross;
+
+    @top-center{
+      font-size: .6em;
+      font-weight: bolder;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      white-space: nowrap !important;
+    }
+
+    
+  }
+
+  @page:first{
+
+   
+    
+    
+    @top-center {
+      content: none;
+    }
+
+    @top-right {
+      content: none;
+    }
+  }
+
+  @page:left {
+    margin-left: 23mm;
+    margin-right: 10mm;
+
+    @top-left {
+      content: counter(page);
+    }
+
+    @top-center{
+      content: "Frankenstein; or";
+    }
+  }
+
+  @page:right {
+    margin-left: 10mm;
+    margin-right: 23mm;
+    /*text-align: right;*/
+
+    @top-right {
+      content: counter(page);
+  }
+
+    @top-center{
+      content: "The Modern Prometheus.";
+      margin-left: -19px;
+      
+  }
+
+}
+
+  body {
+    font-family: Baskerville, serif;
+    color: black;
+    display: block;
+    text-align: justify;
+    font-size: 12pt;
+    height: 100vh;
+    overflow: auto;
+    hyphens: auto-fit;
+  }
+
+  content{
+    display: grid;
+    grid-template-rows: 13px 1fr;
+    align-items: start;
+
+  }
+
+
+.container{
+  display: grid;
+  padding-top: 0px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1550px));
+  grid-gap: 0em 1em;
+  margin: 0px;
+}
+
+.item{
+  display: flex;
+  flex-direction: reverse-row;
+}
+
+
+  h1,h3{
+   margin: 0px;
+   font-weight: normal;
+   text-align: center;
+ }
+
+/*-------FORMATE-START-------*/
+
+h3,p,.small{
+  font-size: 1em;
+  line-height: 1.4em;
+  /*text-align: justify;*/
+  column-count: 1;
+}
+
+
+h2,.medium{
+  font-size: 1.25em;
+  text-align: center;
+
+  /*line-height: 0.95em;*/
+  letter-spacing: 0;
+  margin-top: 0px;
+  margin-bottom: 1.5rem;
+}
+
+h1,.large{
+	font-size: 3em;
+	line-height: 0.815em;
+	letter-spacing: -0.075em;
+  text-align: center;
+  margin: 0px;
+
+}
+
+.extralarge{
+	font-size: 12.5em;
+	line-height: 0.75em;
+	letter-spacing: -0.075em;
+  padding-bottom: 30px;
+  text-align: center;
+}
+
+/*FORMATE-ENDE*/
+
+
+h1{
+  text-align: justify;
+
+
+
+}
+/* letzte Zeile ausgeglichen */
+h1:after{
+  content: '';
+  display: inline-block;
+  width: 100%;
+  margin-bottom: -1em;
+}
+
+
+h3{
+  max-width: 40vw;
+}
+
+
+
+h3,h1,p,.one_col{
+	column-count: 1;
+  /*hyphens: none;*/
+  margin: 0px;
+}
+
+.two_col{
+  display: block;
+  column-count: 2;
+  column-gap: 0.3em;
+  margin: 0px;
+
+}
+
+.four_col{
+	column-count: 4;
+	column-gap: 0.7em; 
+}
+
+
+
+/*----------BREAKS----------*/
+
+.break-before,
+ h1, h2, h3{
+  break-before: always;
+}
+
+
+/*----------PAGES----------*/
+
+.firstpage{
+  
+}
+
